@@ -4,8 +4,6 @@ plugins {
     eclipse
     id("org.springframework.boot") version "3.1.4"
     id("io.spring.dependency-management") version "1.1.3"
-    kotlin("plugin.lombok") version "1.8.10"
-    id("io.freefair.lombok") version "5.3.0"
 }
 
 java {
@@ -61,8 +59,6 @@ dependencies {
     testImplementation("org.springframework.boot:spring-boot-starter-test") {
         exclude (group = "org.junit.vintage", module = "junit-vintage-engine")
     }
-    testCompileOnly "org.projectlombok:lombok:1.18.32"
-    testAnnotationProcessor 'org.projectlombok:lombok:1.18.32'
 }
 
 tasks.named<Test>("test") {
